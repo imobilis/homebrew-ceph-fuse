@@ -22,9 +22,6 @@ class CephFuse < Formula
   patch :DATA
 
   def install
-    # This is a poor work around since Formula doesn't suppport dependency on Brew Cask
-    # system "brew", "cask", "install", "osxfuse"
-
     ENV["CC"] = "#{Formula["llvm"].bin}/clang"
     ENV["CXX"] = "#{Formula["llvm"].bin}/clang++"
     ENV["PKG_CONFIG_PATH"] = "#{Formula["nss"].opt_lib}/pkgconfig"
