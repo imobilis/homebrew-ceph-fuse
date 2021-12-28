@@ -4,11 +4,6 @@ class CephFuse < Formula
   url "https://github.com/ceph/ceph.git", :using => :git, :tag => "v14.2.5", :revision => "ad5bd132e1492173c85fda2cc863152730b16a92"
   version "nautilus-14.2.5"
 
-  bottle do
-    root_url "https://github.com/ailabstw/homebrew-ceph-fuse/releases/download/nautilus-14.2.5/"
-    sha256 "2e1856c6e2885d5d5985028f879f29896848da38aafc84ed2076904d6f5bfb86" => :catalina
-  end
-
   depends_on "openssl"
   depends_on "cmake" => :build
   depends_on "cython" => :build
